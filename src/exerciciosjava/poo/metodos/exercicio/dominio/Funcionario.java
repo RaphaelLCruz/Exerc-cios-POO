@@ -10,6 +10,7 @@ public class Funcionario {
         } else {
             percentual = this.salario * percentual;
             this.salario = this.salario + percentual;
+            System.out.println("-------");
         }
 
 

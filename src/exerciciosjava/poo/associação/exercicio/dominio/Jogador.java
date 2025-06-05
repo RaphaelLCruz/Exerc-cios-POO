@@ -3,25 +3,24 @@ package exerciciosjava.poo.associação.exercicio.dominio;
 public class Jogador {
     private String nome;
     private int numeroCamisa;
+    private Equipe equipe;
 
     public Jogador(String nome, int numeroCamisa) {
         this.nome = nome;
         this.numeroCamisa = numeroCamisa;
     }
 
+
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public int getNumeroCamisa() {
         return numeroCamisa;
     }
 
-    public void setNumeroCamisa(int numeroCamisa) {
-        this.numeroCamisa = numeroCamisa;
+
+    public void setEquipe(Equipe equipe) {
+        this.equipe = equipe;
     }
 }

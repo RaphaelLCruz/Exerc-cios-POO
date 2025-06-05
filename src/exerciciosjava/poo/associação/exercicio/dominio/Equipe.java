@@ -2,36 +2,35 @@ package exerciciosjava.poo.associação.exercicio.dominio;
 
 public class Equipe {
     private String nomeEquipe;
-    private Jogador[] listaJogadores;
+    private Jogador[] jogadores;
+    private int totalJogadores = 0;
+    private final int LIMITE = 5;
 
-    public Equipe(String nomeEquipe, Jogador[] listaJogadores){
+    public Equipe(String nomeEquipe) {
         this.nomeEquipe = nomeEquipe;
-        this.listaJogadores = listaJogadores;
+        this.jogadores = new Jogador[LIMITE];
     }
 
-    public void listarJogadores(){
-       //for(Jogador jogadores: listaJogadores){
-       //    System.out.println(jogadores.getNome());
-       //}
-        System.out.println(this.nomeEquipe);
-        for(int i = 0; i < listaJogadores.length; i++){
-            System.out.println("Nome: " + listaJogadores[i].getNome() + " Camisa: " + listaJogadores[i].getNumeroCamisa());
+    public void listarJogadores() {
+
+        for (Jogador jogador : jogadores) {
+            if (jogador != null) {
+                System.out.println(jogador.getNome() + " Camisa:" + jogador.getNumeroCamisa() + " Time: " + this.nomeEquipe);
+            }
         }
+
     }
 
-    public Jogador[] getListaJogadores() {
-        return listaJogadores;
-    }
 
-    public void setListaJogadores(Jogador[] listaJogadores) {
-        this.listaJogadores = listaJogadores;
-    }
+    public void adicionarJogador(Jogador jogador) {
+        if (totalJogadores >= LIMITE) {
+            System.out.println("Time cheio");
+            return;
+        }
 
-    public String getNomeEquipe() {
-        return nomeEquipe;
-    }
+        jogadores[totalJogadores] = jogador;
+        totalJogadores++;
 
-    public void setNomeEquipe(String nomeEquipe) {
-        this.nomeEquipe = nomeEquipe;
+        jogador.setEquipe(this);
     }
 }

@@ -20,7 +20,7 @@ public class ExercicioEquipeJogador {
         equipe2.adicionarJogador(jogador3);
 
         equipe.listarJogadores();
-        equipe2.listarJogadores();
+          equipe2.listarJogadores();
 
 
     }

@@ -20,7 +20,7 @@ public class Jogador {
     }
 
 
-    public void setEquipe(Equipe equipe) {
+      public void setEquipe(Equipe equipe) {
         this.equipe = equipe;
     }
 }

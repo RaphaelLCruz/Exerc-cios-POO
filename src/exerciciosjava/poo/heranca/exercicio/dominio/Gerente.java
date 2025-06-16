@@ -21,6 +21,12 @@ public class Gerente extends Funcionario{
         System.out.println("\nSalario: " + this.salario);
     }
 
+    public void imprimirFolhaPagamentoGerente2(){
+        super.imprimeNome();
+        this.salario = (salario * 0.45) + this.salario;
+        System.out.println("\nSalario: " + this.salario);
+    }
+
 
     public double getSalario() {
         return salario;

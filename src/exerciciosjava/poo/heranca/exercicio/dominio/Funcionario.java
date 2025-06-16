@@ -3,7 +3,6 @@ package exerciciosjava.poo.heranca.exercicio.dominio;
 public class Funcionario extends Pessoa {
     protected double salario = 2000;
 
-
     public Funcionario(String nome, int codigo) {
         super(nome, codigo);
 

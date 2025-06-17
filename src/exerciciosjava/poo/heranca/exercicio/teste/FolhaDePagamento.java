@@ -12,27 +12,16 @@ public class FolhaDePagamento {
 
 
 
-        pessoa.imprimeNome();
-        System.out.println("\n----------");
-        System.out.println("\n----------");
-        gerente.imprimeGerente();
-        System.out.println("\n----------");
-        telefonista.imprimeTelefonista();
-        System.out.println("\n----------");
-        vendedor.imprimeVendedor();
-
-
-        System.out.println("\n----------");
-        System.out.println("\n----------");
-        System.out.println("\n----------");
 
         funcionario.imprimirFolhaPagamento();
         System.out.println("\n----------");
-        gerente.imprimirFolhaPagamentoGerente();
+        gerente.imprimirFolhaPagamento();
         System.out.println("\n----------");
-        telefonista.imprimeFolhaPagamentoTelefonista();
+        telefonista.imprimirFolhaPagamento();
         System.out.println("\n----------");
-        vendedor.imprimeFolhaPagamentoVendedor();
+        vendedor.imprimirFolhaPagamento();
+
+
 
 
 

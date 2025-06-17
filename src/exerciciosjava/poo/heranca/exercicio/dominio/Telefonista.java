@@ -1,7 +1,6 @@
 package exerciciosjava.poo.heranca.exercicio.dominio;
 
 public class Telefonista extends Funcionario{
-    private double salario = 2000;
 
 
     public Telefonista(String nome, int codigo) {
@@ -9,20 +8,10 @@ public class Telefonista extends Funcionario{
 
     }
 
-    public void imprimeTelefonista(){
-        super.imprimeNome();
-        System.out.println("\nSalario: " + this.salario);
 
-    }
-    public void imprimeFolhaPagamentoTelefonista(){
-        super.imprimeNome();
-        this.salario = (this.salario * 0.1) + this.salario;
-        System.out.println("\nSalario: " + this.salario);
-
-    }
-
+    @Override
     public double getSalario() {
-        return salario;
+        return super.getSalario() + (super.getSalario() * 0.10);
     }
 
     public void setSalario(double salario) {

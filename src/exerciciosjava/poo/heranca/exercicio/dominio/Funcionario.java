@@ -9,6 +9,8 @@ public class Funcionario extends Pessoa {
     }
 
     public void imprimirFolhaPagamento(){
+        super.imprimeNome();
+        System.out.println("\nSalário: " + String.format("%.2f", getSalario()));
     }
     public double getSalario() {
         return salario;

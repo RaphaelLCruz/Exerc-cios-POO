@@ -15,5 +15,12 @@ public class ObservatorioLunarExercicio {
 
 
         observatorioLunar.exibirFaseAtual();
+        System.out.println("---------------");
+        observatorioLunar2.exibirFaseAtual();
+        System.out.println("---------------");
+        observatorioLunar3.exibirFaseAtual();
+        System.out.println("---------------");
+        observatorioLunar4.exibirFaseAtual();
+
     }
 }

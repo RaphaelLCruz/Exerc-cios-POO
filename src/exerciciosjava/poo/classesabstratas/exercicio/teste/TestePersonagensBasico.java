@@ -1,9 +1,6 @@
 package exerciciosjava.poo.classesabstratas.exercicio.teste;
 
-import exerciciosjava.poo.classesabstratas.exercicio.dominio.Arqueiro;
-import exerciciosjava.poo.classesabstratas.exercicio.dominio.Guerreiro;
-import exerciciosjava.poo.classesabstratas.exercicio.dominio.Mago;
-import exerciciosjava.poo.classesabstratas.exercicio.dominio.Personagem;
+import exerciciosjava.poo.classesabstratas.exercicio.dominio.*;
 
 // 5. Classe Principal para Testar o Exemplo
 public class TestePersonagensBasico {
@@ -12,6 +9,8 @@ public class TestePersonagensBasico {
         Guerreiro guerreiro = new Guerreiro("Conan", 150);
         Mago mago = new Mago("Gandalf", 80, 50);
         Arqueiro arqueiro = new Arqueiro("Legolas", 100, 20);
+        Assassino assassino = new Assassino("Less", 90);
+
 
 
 
@@ -21,6 +20,7 @@ public class TestePersonagensBasico {
         guerreiro.exibirStatus();
         mago.exibirStatus();
         arqueiro.exibirStatus();
+        assassino.exibirStatus();
 
         System.out.println("\n--- Os Personagens Atacam! ---");
 
@@ -35,10 +35,27 @@ public class TestePersonagensBasico {
         arqueiro.atacar();
         System.out.println("--------------------");
 
+        assassino.atacar();
+        System.out.println("--------------------");
+
         System.out.println("\n--- Segundo Ataque (Mago e Arqueiro podem mudar o estado) ---");
         mago.atacar(); // Mago usa mais mana
         System.out.println("--------------------");
         arqueiro.atacar(); // Arqueiro usa mais flechas
         System.out.println("--------------------");
+        System.out.println("--------------------");
+        System.out.println("--------------------");
+
+
+        guerreiro.ganharExperiencia(120);
+        mago.ganharExperiencia(100);
+        arqueiro.ganharExperiencia(1200);
+        assassino.ganharExperiencia(520);
+
+
+
+
+
+
     }
 }
